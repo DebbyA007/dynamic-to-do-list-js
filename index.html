@@ -2,18 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>To-Do List Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic To-Do List with Local Storage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="todo-app">
+    <div class="container">
         <h1>My To-Do List</h1>
-        <input type="text" id="task-input" placeholder="Enter a new task">
-        <button id="add-task-btn">Add Task</button>
-        <ul id="task-list">
-            <!-- Tasks will be listed here -->
+        
+        <div class="storage-info">
+            <strong>📱 Local Storage Enabled:</strong> Your tasks will persist across browser sessions!
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Enter a new task..." maxlength="100">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <ul id="taskList">
+            <!-- Tasks will be dynamically added here -->
         </ul>
+
+        <div id="emptyState" class="empty-state" style="display: none;">
+            No tasks yet. Add your first task above! 
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
